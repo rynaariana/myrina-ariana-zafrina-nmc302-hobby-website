@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Hobby Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pinyon+Script&family=Syncopate&display=swap" rel="stylesheet">
+  <link href="css/hobby website.css" rel="stylesheet" type="text/css">
+	
+</head>
+	
+	
+<body class="book-review-page">
+
+ <!-- ░░ HEADER SHELF ░░ -->
+  <header class="shelf">
+    <div class="shelf-inner">
+      <img src="img/clock.png"               alt="" class="clock">
+      <img src="img/flower pot.png"          alt="" class="flower-pot">
+      <img src="img/globe.png"               alt="" class="globe">
+      <img src="img/teddy bear.png"          alt="" class="teddy-bear">
+	  <img src="img/stack of books.png"      alt="My Hobby Website" class="stack-of-books">
+	  <img src="img/cactus.png"              alt="" class="cactus-2">
+      <img src="img/books.png"               alt="" class="books">
+      <img src="img/cactus.png"              alt="" class="cactus">
+		
+		<img src="img/books.png" id="shelf-books" alt="Books" style="cursor:pointer;">
+    </div>
+  </header>
+	
+	<!-- BOOK REVIEW SECTION -->
+  <div class="book-section">
+    <div class="title">Letter To God Volume 1 <span class="by-author">By</span></div>
+    <div class="author-name">NORHAFSAH HAMID</div>
+
+    <div class="book-images">
+  
+  <div class="book-gallery">
+  <img id="left-arrow" class="arrow-icon" src="img/back-button.png" alt="Left Arrow">
+  
+  <img class="book-image" src="img/ltgv1 front cover.jpg" alt="Front Cover">
+  <img class="book-image active" src="img/book 4.jpg" alt="Middle Image"> <!-- ACTIVE one starts in center -->
+  <img class="book-image" src="img/ltgv1 back cover.png" alt="Back Cover">
+  
+  <img id="right-arrow" class="arrow-icon" src="img/right.png" alt="Right Arrow">
+</div>
+  
+</div>
+
+
+    <div class="book-description">
+  <p>
+	  <span class="highlight-phrase">Next,</span> Letters to God: Volume 1 by Norhafsah Hamid is a poignant and inspiring fiction novel that delves into themes of faith, resilience, and self-discovery. The story follows Sarah, an introverted and devout young woman navigating her university life as a law student in England. As she faces hostility from peers, struggles with rumors, and encounters complex relationships, Sarah turns to her faith for solace. Writing heartfelt letters to God becomes her unique way of coping with the pain and confusion of her challenges. Through her journey, the novel explores the importance of staying true to oneself and finding inner peace amidst adversity. With relatable characters and emotional depth, Letters to God: Volume 1 offers readers an intimate portrayal of spiritual growth and the transformative power of faith and friendship.
+  </p>
+  <p>
+	  <span class="highlight-phrase">One of the reasons I absolutely love</span> Letters to God: Volume 1 is its profound ability to inspire personal growth. Sarah's journey of navigating challenges while staying true to her values resonated deeply with me. Her resilience and unwavering faith encouraged me to reflect on my own life and strive to be a better person. The book beautifully portrays how genuine friendships, self-discovery, and spirituality can lead to inner peace and strength. Reading Sarah's heartfelt letters to God reminded me of the importance of connecting with my own beliefs and seeking clarity in moments of uncertainty. This novel not only touched my heart but also motivated me to embrace kindness, humility, and perseverance in my daily life. I love this book so much that I find myself eagerly awaiting the continuation of Sarah's story in Letters to God: Volume 2.
+  </p>
+</div>
+
+   <div class="favorite-line-title">Favorite line</div>
+
+<div class="favorite-line-image">
+  <img src="img/Screenshot 2025-07-17 154522.png" alt="Favorite Quote">
+</div>
+
+
+    <div class="star-rating">
+  <img src="img/star (1).png" alt="star">
+  <img src="img/star (1).png" alt="star">
+  <img src="img/star (1).png" alt="star">
+  <img src="img/empty star.png" alt="star">
+  <img src="img/empty star.png" alt="star">
+</div>
+
+	  <a href="page 3.html" class="button-link">
+  CLICK HERE IF YOU ARE INTERESTED IN THE CONTINUATION OF THIS BOOK
+</a>
+       
+  </div>
+
+ <!-- BOOK ROW (books only, NO pink background) -->
+<div class="book-row">
+  <img class="flower-pot" src="img/flower pot2.png" alt="Flower Pot">
+
+  <a href="https://mphonline.com/products/it-ends-with-us" target="_blank">
+    <img class="book-img" src="img/iewu front cover.jpg" alt="It Ends With Us">
+  </a>
+  <a href="https://mphonline.com/products/it-starts-with-us-uk-1" target="_blank">
+    <img class="book-img" src="img/iswu front book cover.jpg" alt="It Starts With Us">
+  </a>
+  <a href="https://mphonline.com/products/youve-reached-sam" target="_blank">
+    <img class="book-img" src="img/yrs front cover.jpg" alt="You've Reached Sam">
+  </a>
+  <a href="https://mphonline.com/products/letters-to-god-abridged-version-volume-i" target="_blank">
+    <img class="book-img" src="img/ltgv1 front cover.jpg" alt="Letters to God Vol 1">
+  </a>
+  <a href="https://mphonline.com/products/letters-to-god-abridged-version-volume-ii" target="_blank">
+    <img class="book-img" src="img/ltgv2 front cover.jpg" alt="Letters to God Vol 2">
+  </a>
+
+  <img class="flower-pot" src="img/flower pot2.png" alt="Flower Pot">
+</div>
+
+
+<!-- SHELF (pink bar under books) -->
+<div class="book-shelf"></div>
+<script>
+  const bookImages = document.querySelectorAll('.book-image');
+  const leftArrow = document.getElementById('left-arrow');
+  const rightArrow = document.getElementById('right-arrow');
+
+  let activeIndex = 1; // Start with middle image active
+
+  function updateCarousel() {
+    bookImages.forEach((img, index) => {
+      img.classList.remove('active');
+      if (index === activeIndex) {
+        img.classList.add('active');
+      }
+    });
+  }
+
+  leftArrow.addEventListener('click', () => {
+    activeIndex = (activeIndex - 1 + bookImages.length) % bookImages.length;
+    updateCarousel();
+  });
+
+  rightArrow.addEventListener('click', () => {
+    activeIndex = (activeIndex + 1) % bookImages.length;
+    updateCarousel();
+  });
+
+  updateCarousel(); // Initial state
+</script>
+	
+	<script>
+  document.getElementById("shelf-books").addEventListener("click", function(e) {
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+
+    // 📐 Adjust these values to match your image width zones
+    if (x >= 0 && x < 80) {
+      window.location.href = "website hobby ending.html"; // LINKS book
+    } else if (x >= 80 && x < 160) {
+      window.location.href = "website hobby.html"; // ABOUT ME
+    } else if (x >= 160 && x < 240) {
+      window.location.href = "website hobby.html"; // MY HOBBY
+    } else if (x >= 240 && x < 320) {
+      window.location.href = "website hobby.html#top-5"; // BOOKS
+    }
+  });
+</script>
+<div id="popup-container" style="display:none;">
+  <div id="popup-overlay"></div>
+  <div id="popup-image-box">
+    <img id="popup-image" src="img/placeholder.png" alt="Popup Content">
+    <button id="close-popup">X</button>
+  </div>
+</div>
+
+</body>
+</html>
