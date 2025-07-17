@@ -1,0 +1,1010 @@
+@charset "utf-8";
+/* CSS Document */
+/* ───── RESET ─────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Montserrat",sans-serif;
+  background:#fff;
+  overflow-x:hidden;
+}
+
+/* ───── HEADER SHELF ──────────────────────────── */
+.shelf{
+  background:#d50e7b;
+  height:20px;            /* the thin magenta band */
+  position:relative;
+	align-content: center;
+  margin-top: 120px; /* Adjust this number to control how far down it appears */
+}
+.shelf-inner{
+  position:absolute;
+  top:-84px;              /* lifts the shelf items upward */
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:28px;
+}
+.shelf img{height:84px}
+.center‑stack{height:110px;margin:0 38px}
+.item.right{margin-left:auto}
+
+/* ───── INTRO SECTION ─────────────────────────── */
+.intro {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  padding: 0 6vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 40px;
+
+ 
+}
+
+
+.mascot {
+  width: 270px;
+  height: auto;
+  object-fit: contain;
+  align-self: flex-end;   /* ✅ aligns to bottom of .intro */
+  margin: 0;              /* ✅ clear margins */
+  padding: 0;
+  display: block;
+  margin-left: -85px !important;
+  margin-bottom: -1px;
+}
+
+
+/* Reset default spacing for each line */
+.welcome h1 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+}
+
+.welcome-text {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 82px;
+  color: black;
+  display: block;
+  margin-bottom: 10px; /* Adjust spacing between lines */
+  transform: translateY(164px); /* fine-tune vertical alignment */
+  margin-left: -80px;
+}
+
+.to {
+  font-family: 'Abril Fatface', serif;
+  font-size: 90px;
+  display: block;
+  margin-bottom: 10px;
+  margin-left: -80px; /* slight offset to mimic Picture 2 */
+  color: black;
+  transform: translateY(45px); /* fine-tune vertical alignment */
+}
+
+.my {
+  font-family: 'Abril Fatface', serif;
+  font-size: 90px;
+  display: inline-block;
+  margin-right: 10px;
+  color: black;
+  transform: translateY(-120px); /* fine-tune vertical alignment */
+  margin-left: -80px;
+}
+
+.script {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 180px;
+  color: #c42480;
+  display: inline-block;
+  line-height: 1;
+  transform: translateY(-120px); /* fine-tune vertical alignment */
+  margin-left: -96px;
+}
+
+/* Tagline */
+.tagline {
+  font-family: 'Sansation', sans-serif;
+  font-weight: 300 !important;
+  font-size: 30px;
+  letter-spacing: .5px;
+  color: #c42480;
+  margin-bottom: 20px;
+  transform: translateY(170px); /* fine-tune vertical alignment */
+  margin-left: -60px;
+  display: inline-block;           /* Needed so underline wraps just the text */
+  border-bottom: 3px solid black;  /* 👈 This adds the black line */
+  padding-bottom: 1px;             /* Optional: adjust space between text and line */
+}
+
+/* simple responsiveness */
+@media(max-width:992px){
+  .welcome h1{font-size:56px}
+  .script{font-size:84px}
+  .book{width:120px;height:340px}
+}
+@media(max-width:640px){
+  .intro{flex-direction:column;align-items:center;text-align:center}
+  .mascot{width:160px}
+  .book-nav{position:static;margin-top:80px}
+}
+
+.book-stack {
+  width: 620px; /* adjust this width until it matches picture 2 */
+  height: auto;
+ margin-left: -130px;  /* push it to the right corner */
+  z-index: 2;
+}
+
+
+.shelf img.item {
+  height: 84px;
+}
+
+/* Clock */
+.shelf img.clock {
+  height: 60px;
+  margin-top: 25px;
+  transform: translateX(50px); /* moves left without shifting others */
+}
+
+/* Flower Pot */
+.shelf img.flower-pot {
+  height: 125px;
+  margin-top: -35px;
+  transform: translateX(25px); /* moves left slightly */
+}
+
+.shelf img.globe {
+  height: 100px;
+  margin-top: -12px;
+  transform: translateX(-10px); /* moves left slightly */
+}
+
+.shelf img.teddy-bear {
+  height: 90px;
+  margin-top: -1px;
+  transform: translateX(179px); /* moves left slightly */
+}
+
+.shelf img.cactus {
+  height: 200px;
+  margin-top: -75px;
+  transform: translateX(-7px); /* moves left slightly */
+}
+
+.shelf img.stack-of-books {
+  height: 110px;
+  margin-top: -12px;
+  transform: translateX(150px); /* moves left slightly */
+}
+
+.shelf img.books{
+  height: 130px;
+  margin-top: -46px;
+  transform: translateX(100px); /* moves left slightly */
+}
+
+.shelf img.cactus-2 {
+  height: 200px;
+  margin-top: -75px;
+  transform: translateX(214px); /* moves left slightly */
+}
+
+/* BOOK SECTION */
+.book-section {
+  background-color: white;
+  padding: 60px 30px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: -35px;
+}
+
+.by-author {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 75px;
+  font-weight: normal;
+}
+
+.author-name {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 70px;
+  color: #d63384;
+  margin-bottom: 40px;
+  border-bottom: 1px solid black;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.book-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.book-image {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: brightness(0.9);
+  opacity: 0.6;
+}
+
+.book-image.active {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  filter: brightness(1);
+  z-index: 2;
+}
+
+.arrow-icon {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.arrow-icon:hover {
+  transform: scale(1.2);
+}
+
+.book-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.arrow-icon {
+  width: 65px; /* adjust size as needed */
+  height: auto;
+  cursor: pointer;
+}
+
+.book-gallery {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.book-gallery img:not(.arrow-icon) {
+  width: 230px;
+  height: auto;
+  border-radius: 10px;
+   /* ✨ Realistic shadow effect */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.middle-box {
+  width: 250px;
+  height: 350px;
+  background-color: #f8cce2; /* light pink like your reference */
+  border-radius: 10px;
+}
+
+.book-description {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15%;
+  padding-right: 15%;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: justify;
+}
+.book-description p {
+  margin-bottom: 40px;
+	
+}
+
+.favorite-line-title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 120px;
+  font-weight: normal;
+  color: #c42480;
+  margin-top: 50px;
+  margin-bottom: -45px;
+}
+
+.favorite-line-box {
+  border: 2px solid #c42480;
+  background-color: #fff;
+  padding: 20px;
+  font-size: 15px;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.favorite-line-image {
+  position: relative;
+  background-image: url("../img/iewu qoutes.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  aspect-ratio: 4 / 2; /* or whatever fits the image ratio */
+  margin: 0 auto 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border: 3px solid black;
+  overflow: hidden;
+}
+
+.highlight-line {
+  position: absolute;
+  background-color: #c42480;
+  opacity: 0.5;
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+.button-link {
+  display: inline-block;
+  background-color: #ffd9e6;
+  color: #000;
+  padding: 18px 30px;
+  font-size: 17px;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 1px;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.button-link:hover {
+  background-color: #d63384 !important;
+  color: #fff;
+}
+
+.button-link:hover {
+  background-color: #d63384; /* Keep the pink hover */
+  color: #fff;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.star-rating img {
+  width: 80px;   /* adjust as needed */
+  height: auto;
+}
+
+.highlight-phrase {
+  font-family: 'Pinyon Script', cursive;
+  color: #c42480;
+  font-size: 40px;         /* you can slightly reduce this */
+  font-weight: normal;
+  vertical-align: baseline; /* ✅ aligns better with surrounding text */
+  line-height: 1;           /* ✅ tighter spacing */
+  margin-right: -1px;       /* ✅ closes gap with next word */
+}
+
+.book-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 50px;
+  margin-bottom: 3px !important;    /* tighten spacing below books */
+  padding-bottom: 0;
+}
+
+.book-img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.3); /* 👈 realistic soft shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 0;
+}
+
+.book-shelf {
+  background-color: #c42480;
+  height: 25px !important;
+  width: 100%;
+  margin-top: -6px !important;        /* raise the shelf closer to the books */
+}
+
+.book-img:hover {
+  transform: translateY(-5px);
+}
+
+/* flower pot style (optional, if needed to resize) */
+.flower-pot {
+  height: 160px;
+}
+
+.book-review-page .book-section {
+  background-color: #ffd9e6;
+}
+
+.book-review-page .book-description,
+.book-review-page .book-gallery {
+  background-color: transparent; /* remove white for this page only */
+}
+
+.book-review-page .book-section {
+  background-color: #ffd9e6; /* match background */
+}
+
+.book-review-page .book-row {
+  background-color: #ffd9e6;
+}
+
+.book-review-page {
+  background-color: #ffd9e6; /* Light pink background */
+}
+
+/* Don't touch this — keep your shelf dark pink */
+.shelf {
+  background-color: #d6006f; /* or whatever it originally was */
+}
+
+.book-review-page .middle-box {
+   background-color: white; /* light pink like your reference */
+}
+
+.book-review-page .favorite-line-image {
+  background-image: url("../img/iswu qoutes.png");
+  background-size: cover;        /* Crops but fills */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 12 / 5;
+  border: 3px solid black;
+  margin: 0 auto 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.book-review-page .button-link {background-color: white;}
+
+.book-review-page-1 .favorite-line-image {
+	background-image: url("../img/yrs qoutes.png");
+}
+
+.book-review-page-2 .book-section {
+  background-color: #ffd9e6;
+}
+
+.book-review-page-2 .book-description,
+.book-review-page-2 .book-gallery {
+  background-color: transparent; /* remove white for this page only */
+}
+
+.book-review-page-2 .book-section {
+  background-color: #ffd9e6; /* match background */
+}
+
+.book-review-page-2 .book-row {
+  background-color: #ffd9e6;
+}
+
+.book-review-page-2 {
+  background-color: #ffd9e6; /* Light pink background */
+}
+
+/* Don't touch this — keep your shelf dark pink */
+.shelf {
+  background-color: #d6006f; /* or whatever it originally was */
+}
+
+.book-review-page-2 .middle-box {
+   background-color: white; /* light pink like your reference */
+}
+
+.book-review-page-2 .book-gallery img:not(.arrow-icon) {
+  width: 250px !important;
+  height: 350px !important;
+  object-fit: cover !important;
+  border-radius: 10px;
+}
+.book-review-page-2.middle-box {
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.book-review-page-2 .favorite-line-image {
+  background-image: url("../img/ltgv1 qoutes.png");
+  background-size: contain;           /* show full image */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 5 / 4;                /* ← adjust this */
+  border: 3px solid black;
+  margin: 0 auto 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.book-review-page-2 .button-link {background-color: white;}
+
+
+.book-review-page-3 .book-gallery img:not(.arrow-icon) {
+  width: 250px !important;
+  height: 350px !important;
+  object-fit: cover !important;
+  border-radius: 10px;
+}
+.book-review-page-3.middle-box {
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.book-review-page-3 .favorite-line-image {
+  background-image: url("../img/ltgv2 qoutes.png");
+  background-size: cover;              /* fill the box, allow cropping */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 4 / 2;                 /* try adjusting to fit better */
+  border: 3px solid black;
+  margin: 0 auto 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.ending .body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffd9e6;
+}
+
+.ending .thankyou-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.ending .bookshelf-column {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;                    /* 🔧 Remove flex gap */
+  height: 100%;
+  z-index: 0;
+  line-height: 0;            /* 🔧 Remove vertical spacing */
+}
+
+.ending .bookshelf-column img {
+  display: block;            /* 🔧 Remove inline whitespace */
+  width: 260px;              /* or set your desired fixed width */
+  height: auto;              /* Preserve ratio */
+  margin: 0;                 /* 🔧 Remove default spacing */
+  padding: 0;
+  border: 0;
+}
+
+.ending .left-shelf {
+  left: 0 !important;
+  margin-left: -10px;
+  margin-top: -1px;
+}
+
+.ending .right-shelf {
+  right: 0;
+  margin-right: -10px;
+  margin-top: -1px;
+}
+
+.ending.content {
+  max-width: 650px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.content {
+  max-width: 600px; /* Or any width that looks good */
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #c42480;
+  font-size: 65px;
+ margin-bottom: 10px; /* ⬅️ Reduce from 0 or a large value */
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #333;
+   margin: -20px 0; /* ⬅️ was 20px before */
+}
+
+.ending .ps-text {
+  font-size: 14px;
+  margin-top: 50px;
+  color: black;
+}
+
+.ending .bear img {
+  width: 200px;
+  margin: 0 auto -40px; /* ⬅️ Pushes bear down to sit on the book */
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.ending {
+	background-color:  #ffd9e6;
+}
+
+.ending .book-shelf {
+  background-color: #c42480;
+  height: 25px !important;
+  width: 300% !important ;
+  position: relative;     /* Make it stick to bottom */
+  bottom: 0;           /* Align to bottom */
+  left: -350px !important;
+  z-index: 0;          /* Behind bear/books */
+  margin-bottom: -50px !important;
+}
+
+.ending .book-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 50px;
+  margin-bottom: 25px;  /* Push them above the fixed shelf */
+  padding-bottom: 0;
+}
+
+/* ─── TOP BOOKS SECTION ───────────────────── */
+.top-5 {align-content: center}
+.top-5 .top-books-section {
+  background-color: #ffd9e6;
+  
+  font-family: 'Georgia', serif;
+  text-align: center;
+
+ 
+	
+position: relative;
+/* ✅ Gently nudges the whole section to the right */
+}
+
+.top-5 .books-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: -30px !important;
+}
+
+.top-5 .books-header h2 {
+  font-size: 90px;
+  line-height: 1;
+  color: #000;
+  margin-left: 20px;
+  margin-bottom: -20px !important; 
+}
+
+.top-5 .books-header .italic {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 40px;
+  color: black;
+  margin-left: -15px;
+}
+
+.top-5 .books-header .books-word {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 65px;
+  color: #d73383;
+  display: block;
+  margin-top: -3px;
+}
+
+.top-5 .books-header img {
+  width: 350px;
+  height: 190px ;
+  margin-bottom: 20px;
+}
+
+.top-5 .book-rows {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.top-5 .book-box {
+  background: #fff;
+  border: 2px solid #000;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.top-5 .book-box img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Make title and author closer, and author underlined */
+.top-5 .book-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px; /* tighter spacing between title and author */
+}
+
+.top-5 .book-text h3 span {
+  font-style: italic;
+  font-size: 14px;
+  color: black; /* change 'By' to black */
+}
+
+/* Style author name */
+.top-5 .book-text .author {
+  font-family: 'Syncopate', sans-serif;
+  color: #d73383;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: inline-block;
+  border-bottom: 2px solid black; /* add black underline */
+  padding-bottom: 2px;
+}
+
+.top-5 .book-text p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.top-5 .book-text button {
+  background-color: #f7c6da;
+  color: black;
+  border: 2px solid #000;
+  padding: 5px 15px;
+  font-size: 13px;
+  font-weight: 10px !important;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.top-5 .book-text button:hover {
+  background-color: #ffc3e0;
+  box-shadow: 0 0 10px #ff87c4;
+}
+
+.top-5 .bookshelf-line {
+  height: 20px !important;
+  background: black;
+  margin: 10px 0 30px; /* removes left/right auto centering */
+  width: 150% !important;         /* full screen width */
+  margin-left: -50px;
+}
+
+.homepage .middle-image {
+  width: 250px !important;
+  height: 350px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.book-review-page .middle-image {
+  width: 250px !important;
+  height: 350px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.book-review-page-1 .middle-image {
+  width: 250px !important;
+  height: 350px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.book-review-page-2 .middle-image {
+  width: 250px !important;
+  height: 350px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.book-review-page-3 .middle-image {
+  width: 250px !important;
+  height: 350px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.book-review-page-2 .button-link {
+  display: inline-block;
+  background-color: white;
+  color: #000;
+  padding: 18px 30px;
+  font-size: 17px;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 1px;
+  margin-bottom: 80px;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.book-review-page-2.button-link:hover {
+  background-color: #d63384 !important;
+  color: #fff;
+}
+
+.book-review-page-2.button-link:hover {
+  background-color: #d63384; /* Keep the pink hover */
+  color: #fff;
+}
+
+#shelf-books {
+  width: 205px; /* Adjust this width smaller as needed */
+  height: 140px;
+  position: absolute;
+  top:  -56px;     /* adjust depending on your header height */
+  right: 127px;    /* move it closer to the left side if needed */
+  z-index: 10;
+}
+
+/* INTRO SECTION */
+.intro-section.html.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.intro-section {
+  background-color: white;
+  padding: 40px 0;
+  width: 100vw !important; /* ✅ force it to go corner-to-corner */
+}
+
+.intro-container {
+  display: flex;
+  max-width: 1200px;
+  /* ✅ Moves it slightly to the left */
+ /* Optional: add less margin on the right */
+  width: 100%;
+  gap: 40px;
+  
+  
+}
+
+.intro-image {
+  width: 385px;
+  height: 430px;
+  background-color: #ffd7e8;
+margin-left: 30px
+}
+
+.intro-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.intro-text p {
+  font-family: 'Sansation', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  text-align: justify;
+  color: #000;
+}
+
+/* HOBBY SECTION */
+.hobby-section {
+  background-color: #ffd7e8;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.hobby-container {
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+}
+
+.hobby-title {
+  font-size: 60px;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.is-reading-row {
+  display: flex;
+  align-items: baseline;
+  border-bottom: 2px solid black;
+}
+
+.script-font {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 150px;
+  font-weight: normal;
+  margin-bottom: -70px;
+}
+
+.bold-font {
+  font-family: 'Abril Fatface', serif;
+  font-size: 75px;
+  margin-right: 10px;
+  margin-left: 250px;
+}
+
+.highlight-font {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 75px;
+  color: #d63384;
+}
+
+.hobby-description {
+  font-family: 'Sansation', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+  color: #000;
+  margin-top: 40px;
+}
+
+.carousel-wrapper {
+  width: 400px;
+  height: 550px;
+  border: 3px solid black;
+  overflow: hidden;
+   margin-left: 40px;  /* ✅ adjust this value to move it more to the center */
+  margin-right: auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide {
+  display: flex;
+  width: 1600px; /* 4 images * 400px */
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 400px;
+  height: 550px;
+  object-fit: cover;
+}
